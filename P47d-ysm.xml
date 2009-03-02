@@ -5,7 +5,7 @@ P47-D Thunderbolt
 -->
 
 <airplane mass="10000">
-  <approach speed="110" aoa="7">
+  <approach speed="110" aoa="6">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
@@ -23,7 +23,7 @@ P47-D Thunderbolt
  <fuselage width="1.4" ax="-1.24" ay="0" az="-0.234" bx="-5.62" by="0" bz="0.0" taper="0.2" midpoint="0.0" cx="1.2" cy="1.2"/>
 
   <wing x="0.662" y="0.7" z="-0.56" chord="2.83" taper="0.5"
-  length="5.510" dihedral="4" incidence="1.0" camber="0.0">
+  length="5.510" dihedral="4" incidence="1.0" camber="0.02">
     <stall width="6" aoa="15" peak="1.5"/>
     <flap0 drag="1.8" end="0.6" lift="1.6" start="0.0"/>
     <flap1 drag="1.2" end="0.97" lift="1.3" start="0.58"/>
@@ -38,7 +38,7 @@ P47-D Thunderbolt
 
   <hstab x="-5.22" y="0.14" z="0.2" chord="1.9" taper="0.4" length="2.28">
     <stall width="4" aoa="15" peak="1.5"/>
-    <flap0 drag="1.2" end="1" lift="1.55" start="0"/>
+    <flap0 drag="1.2" end="1" lift="1.6" start="0"/>
     <control-input control="FLAP0" axis="/controls/flight/elevator"/>
     <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>
     <control-output prop="/surface-positions/elevator-pos-norm" control="FLAP0"/>
@@ -65,7 +65,7 @@ P47-D Thunderbolt
     <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
   </propeller>
 
-  <gear x="1.80" y="2.0" z="-2.4" compression="0.3" sfric="0.5" dfric="0.8">
+  <gear x="1.80" y="2.0" z="-2.4" compression="0.3" sfric="0.6" dfric="0.8" damp="3">
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
@@ -74,7 +74,7 @@ P47-D Thunderbolt
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
   </gear>
 
-  <gear x="1.80" y="-2.0" z="-2.4"  compression="0.3" sfric="0.5" dfric="0.5">
+  <gear x="1.80" y="-2.0" z="-2.4"  compression="0.3" sfric="0.6" dfric="0.5" damp="3">
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
@@ -83,7 +83,7 @@ P47-D Thunderbolt
     <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <gear x="-4.58" y="0.0" z="-0.95" compression="0.2" sfric="2" dfric="1">
+  <gear x="-4.58" y="0.0" z="-0.95" compression="0.2" sfric="2" dfric="2">
  <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1"
                    dst0="1" dst1="0" control="CASTERING"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -98,6 +98,6 @@ P47-D Thunderbolt
   <tank x="-1.5" y="0" z="0" capacity="600"/>
   <tank x="0" y="0" z="0" capacity="0"/>
 
-  <ballast x="-5.0" y="0.0" z="0.0" mass="-500"/>
+  <ballast x="-5.0" y="0.0" z="0.0" mass="-200"/>
 
 </airplane>
