@@ -26,6 +26,25 @@
         <max-dist>50.0</max-dist>
     </crank>
 
+    <energizer>
+    <name>energizer</name>
+        <mode>looped</mode>
+        <path>Aircraft/P47/Sound/energizer.wav</path>
+                <property>engines/engine/energizer</property>
+        <pitch>
+            <property>engines/engine/energizer</property>
+            <offset>0.5</offset>
+            <factor>1.5</factor>
+        </pitch>
+        <position><!-- +X = back / +Y = left / +Z = up-->
+            <x>3.5</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>5.0</max-dist>
+    </energizer>
+
     <crank>
         <name>cough1</name>
         <path>Aircraft/P47/Sound/startup.wav</path>
@@ -247,6 +266,46 @@
         <reference-dist>0.5</reference-dist>
         <max-dist>1.0</max-dist>
     </wind>
+
+    <switch>
+        <name>click on</name>
+        <mode>once</mode>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <property>sim/sound/click</property>
+        </condition>
+        <volume>
+            <offset>0.7</offset>
+        </volume>
+        <position>
+            <x>-0.5</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>2.0</reference-dist>
+        <max-dist>4.0</max-dist>
+    </switch>
+
+    <switch>
+        <name>click off</name>
+        <mode>once</mode>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>sim/sound/click</property>
+            </not>
+        </condition>
+        <volume>
+            <offset>0.7</offset>
+        </volume>
+        <position>
+            <x>-0.5</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>2.0</reference-dist>
+        <max-dist>4.0</max-dist>
+    </switch>
 
 </fx>
 </PropertyList>

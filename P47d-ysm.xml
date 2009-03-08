@@ -2,19 +2,30 @@
 P47-D Thunderbolt
 2009 Syd Adams 
 
+stall:
+flaps/gear up 115 mph IAS (100 kts)
+flaps/gear down 100 mph IAS (87 kts)
+
+Root chord 2.794
+MAC length 2.221484
+Wingspan 12.49 m
 -->
 
+
 <airplane mass="10000">
-  <approach speed="110" aoa="6">
+  <approach speed="105" aoa="4.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/wastegate" value="0"/>
     <control-setting axis="/controls/flight/flaps" value="1"/>
   </approach>
-  <cruise speed="376" alt="30000">
-    <control-setting value="1.0" axis="/controls/engines/engine[0]/throttle"/>
+
+  <cruise speed="322" alt="30000">
+    <control-setting value="1" axis="/controls/engines/engine[0]/throttle"/>
     <control-setting value="1.0" axis="/controls/engines/engine[0]/mixture"/>
-    <control-setting value="1.0" axis="/controls/engines/engine[0]/propeller-pitch"/>
+    <control-setting value="0.863" axis="/controls/engines/engine[0]/propeller-pitch"/>
+    <control-setting axis="/controls/engines/engine[0]/wastegate" value="1"/>
     <control-setting value="0.0" axis="/controls/flight/flaps"/>
   </cruise>
   <cockpit x="0" y="0" z="0.78"/>
@@ -22,11 +33,11 @@ P47-D Thunderbolt
  <fuselage width="1.4" ax="4.05" ay="0" az="-0.234" bx="-1.24" by="0" bz="-0.234" taper="1.0" midpoint="0.5" cx="1.2" cy="1.2"/>
  <fuselage width="1.4" ax="-1.24" ay="0" az="-0.234" bx="-5.62" by="0" bz="0.0" taper="0.2" midpoint="0.0" cx="1.2" cy="1.2"/>
 
-  <wing x="0.662" y="0.7" z="-0.56" chord="2.83" taper="0.5"
-  length="5.510" dihedral="4" incidence="1.0" camber="0.02">
-    <stall width="6" aoa="15" peak="1.5"/>
-    <flap0 drag="1.8" end="0.6" lift="1.6" start="0.0"/>
-    <flap1 drag="1.2" end="0.97" lift="1.3" start="0.58"/>
+  <wing x="0.662" y="0.7" z="-0.56" chord="2.794" taper="0.59"
+  length="5.5484" dihedral="4" incidence="1.0" camber="0.05">
+    <stall width="8" aoa="13" peak="1.5"/>
+    <flap0 drag="1.8" end="0.6" lift="1.5" start="0.0"/>
+    <flap1 drag="1.1" end="0.97" lift="1.3" start="0.58"/>
     <control-input control="FLAP0" axis="/controls/flight/flaps"/>
     <control-input split="true" control="FLAP1" axis="/controls/flight/aileron"/>
     <control-input split="true" control="FLAP1" axis="/controls/flight/aileron-trim"/>
@@ -36,58 +47,58 @@ P47-D Thunderbolt
     <control-speed transition-time="15" control="FLAP0"/>
   </wing>
 
-  <hstab x="-5.22" y="0.14" z="0.2" chord="1.9" taper="0.4" length="2.28">
-    <stall width="4" aoa="15" peak="1.5"/>
-    <flap0 drag="1.2" end="1" lift="1.6" start="0"/>
+  <hstab x="-5.22" y="0.14" z="0.2" chord="1.9" taper="0.4" length="2.28" effectiveness="1.5">
+    <stall width="4" aoa="16" peak="1.5"/>
+    <flap0 drag="1.2" end="1" lift="1.5" start="0"/>
     <control-input control="FLAP0" axis="/controls/flight/elevator"/>
     <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>
     <control-output prop="/surface-positions/elevator-pos-norm" control="FLAP0"/>
   </hstab>
 
   <vstab x="-5.22" y="0" z="0.244"  chord="1.9" taper="0.4" length="1.9"  effectiveness="2.0">
-    <stall width="3" aoa="14" peak="1.5"/>
-    <flap0 drag="1.3" end="1" lift="1.4" start="0"/>
+    <stall width="5" aoa="14" peak="1.5"/>
+    <flap0 drag="1.2" end="1" lift="1.5" start="0"/>
     <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
     <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
     <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
   </vstab>
 
   <!--  R-2800-59 DoubleWasp  -->
-  <propeller moment="95" x="3.5" y="0.0" z="0.0" mass="2400" radius="1.82" cruise-power="2000" cruise-alt="30000"
-   min-rpm="1600" max-rpm="2700" cruise-speed="390" cruise-rpm="2700" fine-stop="0.25" coarse-stop="4">
-    <piston-engine eng-rpm="2700" alt="0" eng-power="2535"
-     displacement="2804" compression="6.75" turbo-mul="2.5" wastegate-mp="60"/>
+  <propeller moment="55" x="3.5" y="0.0" z="0.0" mass="2400" radius="1.82"
+  cruise-power="1625" cruise-alt="29000" cruise-speed="320" cruise-rpm="2550"
+   min-rpm="1600" max-rpm="2700" >
+    <piston-engine eng-rpm="2700" alt="0" eng-power="2000"
+     displacement="2804" compression="6.75" turbo-mul="6" wastegate-mp="52"/>
     <actionpt x="4.35" y="0.0" z="0.0"/>
     <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
     <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
     <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+    <control-input control="WASTEGATE" axis="/controls/engines/engine[0]/wastegate"/>
     <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
     <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
   </propeller>
 
-  <gear x="1.80" y="2.0" z="-2.4" compression="0.3" sfric="0.6" dfric="0.8" damp="3">
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <gear x="1.822" y="2.36" z="-2.52" compression="0.3" damp="3" spring="0.25">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-    <control-input control="EXTEND" axis="/control/gear/gear-down"/>
-    <control-speed control="EXTEND" transition-time="5"/>
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="12"/>
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
   </gear>
 
-  <gear x="1.80" y="-2.0" z="-2.4"  compression="0.3" sfric="0.6" dfric="0.5" damp="3">
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <gear x="1.822" y="-2.36" z="-2.52"  compression="0.3" damp="3" spring="0.25">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-    <control-input control="EXTEND" axis="/control/gear/gear-down"/>
-    <control-speed control="EXTEND" transition-time="5"/>
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="12"/>
     <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <gear x="-4.58" y="0.0" z="-0.95" compression="0.2" sfric="2" dfric="2">
+  <gear x="-4.58" y="0.0" z="-0.95" compression="0.2" >
  <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1"
                    dst0="1" dst1="0" control="CASTERING"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="4"/>
+    <control-speed control="EXTEND" transition-time="5"/>
     <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
     src0="-1.0" src1="1.0"
     dst0="0.5" dst1="-0.5"/>
@@ -98,6 +109,6 @@ P47-D Thunderbolt
   <tank x="-1.5" y="0" z="0" capacity="600"/>
   <tank x="0" y="0" z="0" capacity="0"/>
 
-  <ballast x="-5.0" y="0.0" z="0.0" mass="-200"/>
+  <ballast x="-5.0" y="0.0" z="0.0" mass="-1000"/>
 
 </airplane>
