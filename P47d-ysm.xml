@@ -47,7 +47,7 @@ Wingspan 12.49 m
     <control-speed transition-time="15" control="FLAP0"/>
   </wing>
 
-  <hstab x="-5.22" y="0.14" z="0.2" chord="1.9" taper="0.4" length="2.28" effectiveness="1.5">
+  <hstab x="-5.22" y="0.14" z="0.2" chord="1.9" taper="0.4" length="2.28" effectiveness="1.2">
     <stall width="4" aoa="16" peak="1.5"/>
     <flap0 drag="1.2" end="1" lift="1.5" start="0"/>
     <control-input control="FLAP0" axis="/controls/flight/elevator"/>
@@ -57,7 +57,7 @@ Wingspan 12.49 m
 
   <vstab x="-5.22" y="0" z="0.244"  chord="1.9" taper="0.4" length="1.9"  effectiveness="2.0">
     <stall width="5" aoa="14" peak="1.5"/>
-    <flap0 drag="1.2" end="1" lift="1.5" start="0"/>
+    <flap0 drag="1.2" end="1" lift="1.4" start="0"/>
     <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
     <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
     <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
@@ -78,7 +78,8 @@ Wingspan 12.49 m
     <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
   </propeller>
 
-  <gear x="1.822" y="2.36" z="-2.52" compression="0.3" damp="3" spring="0.25">
+  <gear x="1.822" y="2.36" z="-2.52" compression="0.3" 
+  retract-time="12" damp="3" spring="0.25">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -86,7 +87,8 @@ Wingspan 12.49 m
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
   </gear>
 
-  <gear x="1.822" y="-2.36" z="-2.52"  compression="0.3" damp="3" spring="0.25">
+  <gear x="1.822" y="-2.36" z="-2.52"  compression="0.3"
+retract-time="12"  damp="3" spring="0.25">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -94,14 +96,13 @@ Wingspan 12.49 m
     <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 
-  <gear x="-4.58" y="0.0" z="-0.95" compression="0.2" >
+  <gear x="-4.58" y="0.0" z="-0.95" compression="0.2"
+retract-time="12"  >
  <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1"
                    dst0="1" dst1="0" control="CASTERING"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="5"/>
+    <control-speed control="EXTEND" transition-time="12"/>
     <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
-    src0="-1.0" src1="1.0"
-    dst0="0.5" dst1="-0.5"/>
     </gear>
 
 <!-- Fuel  -->

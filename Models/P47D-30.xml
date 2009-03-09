@@ -588,6 +588,40 @@
     </animation>
 
     <animation>
+        <type>rotate</type>
+        <object-name>LUdamper</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <factor>100</factor>
+        <center>
+            <x-m>-1.715</x-m>
+            <y-m>-2.533</y-m>
+            <z-m>-1.127</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>LLdamper</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <factor>115</factor>
+        <center>
+            <x-m>-1.640</x-m>
+            <y-m>-2.534</y-m>
+            <z-m>-1.420</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
         <type>spin</type>
         <object-name>Ltire</object-name>
         <property>gear/gear[0]/tire-rpm</property>
@@ -801,6 +835,40 @@
     </animation>
 
     <animation>
+        <type>rotate</type>
+        <object-name>RUdamper</object-name>
+        <property>gear/gear[1]/compression-m</property>
+        <factor>100</factor>
+        <center>
+            <x-m>-1.715</x-m>
+            <y-m>2.533</y-m>
+            <z-m>-1.127</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>RLdamper</object-name>
+        <property>gear/gear[1]/compression-m</property>
+        <factor>115</factor>
+        <center>
+            <x-m>-1.640</x-m>
+            <y-m>2.534</y-m>
+            <z-m>-1.420</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
         <type>spin</type>
         <object-name>Rtire</object-name>
         <property>gear/gear[1]/tire-rpm</property>
@@ -827,7 +895,7 @@
         <condition>
             <less-than>
                 <property>engines/engine[0]/rpm</property>
-                <value>500.000</value>
+                <value>700.000</value>
             </less-than>
         </condition>
     </animation>
@@ -839,7 +907,7 @@
             <and>
                 <greater-than>
                     <property>engines/engine[0]/rpm</property>
-                    <value>499.999</value>
+                    <value>699.999</value>
                 </greater-than>
                 <less-than>
                     <property>engines/engine[0]/rpm</property>
@@ -855,7 +923,7 @@
         <condition>
             <greater-than>
                 <property>engines/engine[0]/rpm</property>
-                <value>999.999</value>
+                <value>1599.999</value>
             </greater-than>
         </condition>
     </animation>

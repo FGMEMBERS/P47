@@ -41,7 +41,7 @@
             <y>0</y>
             <z>0</z>
         </position>
-        <reference-dist>1.0</reference-dist>
+        <reference-dist>2.0</reference-dist>
         <max-dist>5.0</max-dist>
     </energizer>
 
@@ -51,7 +51,7 @@
         <property>engines/engine[0]/running</property>
         <volume>
             <property>engines/engine[0]/running</property>
-            <max>0,6</max>
+            <max>0,5</max>
         </volume>
         <position>
             <x>3.5</x>
@@ -61,6 +61,33 @@
         <reference-dist>20.0</reference-dist>
         <max-dist>50.0</max-dist>
     </crank>
+
+    <engine>
+        <name>idle</name>
+        <mode>looped</mode>
+        <path>Aircraft/P47/Sound/idle.wav</path>
+        <condition>
+            <greater-than>
+                <property>engines/engine/rpm</property>
+                <value>10</value>
+            </greater-than>
+        </condition>
+        <volume>
+            <property>sim/sound/idle</property>
+        </volume>
+        <pitch>
+            <property>engines/engine/rpm</property>
+            <offset>0.5</offset>
+            <factor>0.000666</factor>
+        </pitch>
+        <position>
+            <x>3.5</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>20.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </engine>
 
     <engine>
         <name>engine1_running</name>
@@ -111,7 +138,6 @@
         <reference-dist>5.0</reference-dist>
         <max-dist>10.0</max-dist>
     </rumble>
-    
 
     <gear>
         <name>gear</name>
@@ -124,47 +150,9 @@
             <factor>-0.001</factor>
         </pitch>
         <position>
-            <x>-9.0</x>
+            <x>0</x>
             <y>0</y>
-            <z>-1.68</z>
-        </position>
-        <reference-dist>5.0</reference-dist>
-        <max-dist>10.0</max-dist>
-    </gear>
-
-    <gear>
-        <name>gear</name>
-        <mode>in-transit</mode>
-        <path>Sounds/gear.wav</path>
-        <property>gear/gear[1]/position-norm</property>
-        <pitch>
-            <internal>dt_play</internal>
-            <offset>1.0</offset>
-            <factor>-0.001</factor>
-        </pitch>
-        <position>
-            <x>0.0</x>
-            <y>-4</y>
-            <z>-1.0</z>
-        </position>
-        <reference-dist>5.0</reference-dist>
-        <max-dist>10.0</max-dist>
-    </gear>
-
-    <gear>
-        <name>gear</name>
-        <mode>in-transit</mode>
-        <path>Sounds/gear.wav</path>
-        <property>gear/gear[2]/position-norm</property>
-        <pitch>
-            <internal>dt_play</internal>
-            <offset>1.0</offset>
-            <factor>-0.001</factor>
-        </pitch>
-        <position>
-            <x>0.0</x>
-            <y>4</y>
-            <z>-1.0</z>
+            <z>-2</z>
         </position>
         <reference-dist>5.0</reference-dist>
         <max-dist>10.0</max-dist>
@@ -172,7 +160,7 @@
 
     <gear>
         <name>gear-lock</name>
-        <path>Sounds/lock.wav</path>
+        <path>Sounds/gear-lck.wav</path>
         <condition>
             <equals>
                 <property>gear/gear[0]/position-norm</property>
@@ -180,9 +168,9 @@
             </equals>
         </condition>
         <position>
-            <x>-9.0</x>
+            <x>0</x>
             <y>0</y>
-            <z>-1.68</z>
+            <z>-2</z>
         </position>
         <reference-dist>5.0</reference-dist>
         <max-dist>10.0</max-dist>
@@ -217,9 +205,9 @@
             <offset>1.2</offset>
         </pitch>
         <position>
-            <x>-4.0</x>
+            <x>0.0</x>
             <y>0</y>
-            <z>-3.8</z>
+            <z>-2</z>
         </position>
         <reference-dist>20.0</reference-dist>
         <max-dist>50.0</max-dist>
@@ -234,12 +222,12 @@
             <factor>0.5</factor>
         </volume>
         <position>
-            <x>-9.0</x>
+            <x>0</x>
             <y>0</y>
-            <z>-1.68</z>
+            <z>-1</z>
         </position>
-        <reference-dist>10.0</reference-dist>
-        <max-dist>20.0</max-dist>
+        <reference-dist>5.0</reference-dist>
+        <max-dist>10.0</max-dist>
     </flap>
 
     <wind>
@@ -259,12 +247,12 @@
             <offset>1.25</offset>
         </pitch>
         <position>
-            <x>-12.0</x>
+            <x>-0.5</x>
             <y>0</y>
-            <z>-0.6</z>
+            <z>1.25</z>
         </position>
-        <reference-dist>0.5</reference-dist>
-        <max-dist>1.0</max-dist>
+        <reference-dist>1</reference-dist>
+        <max-dist>2.0</max-dist>
     </wind>
 
     <switch>
@@ -275,15 +263,15 @@
             <property>sim/sound/click</property>
         </condition>
         <volume>
-            <offset>0.7</offset>
+            <offset>0.5</offset>
         </volume>
         <position>
-            <x>-0.5</x>
+            <x>-0.6</x>
             <y>0</y>
-            <z>0</z>
+            <z>0.25</z>
         </position>
-        <reference-dist>2.0</reference-dist>
-        <max-dist>4.0</max-dist>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
     </switch>
 
     <switch>
@@ -296,15 +284,15 @@
             </not>
         </condition>
         <volume>
-            <offset>0.7</offset>
+            <offset>0.5</offset>
         </volume>
         <position>
-            <x>-0.5</x>
+            <x>-0.6</x>
             <y>0</y>
-            <z>0</z>
+            <z>0.25</z>
         </position>
-        <reference-dist>2.0</reference-dist>
-        <max-dist>4.0</max-dist>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
     </switch>
 
 </fx>

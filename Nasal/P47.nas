@@ -63,6 +63,7 @@ controls.startEngine = func(v=1 ) {
 setlistener("/sim/signals/fdm-initialized", func {
     Vvolume.setDoubleValue(-0.3);
     FDM=getprop("sim/flight-model");
+    setprop("sim/sound/idle",0);
     update();
 });
 
@@ -89,13 +90,14 @@ setlistener("/sim/model/autostart", func(idle){
 
 
 var update = func {
+        var idle=0;
         tire.get_rotation(FDM);
         var eg=props.globals.getNode("engines/engine/energizer",1);
         var engr=eg.getValue();
         var scnd = getprop("sim/time/delta-sec");
         if(getprop("controls/engines/engine/energizer")==1){
             if(getprop("systems/electrical/batt-volts")>5){
-                engr=engr+(scnd*0.06);
+                engr=engr+(scnd*0.05);
                 if(engr>1)engr=1;
             }
         }else{
@@ -105,6 +107,15 @@ var update = func {
             }
         }
         eg.setValue(engr);
-
+        var rpm =getprop("engines/engine/rpm") or 0;
+        if(rpm>10){
+        idle=0.6;
+        var snd=1500-rpm;
+        if(snd<0)snd=0;
+        snd=snd*0.000666;
+        if(snd>0.6)snd=0.6;
+        idle=snd;
+        }
+        setprop("sim/sound/idle",idle);
     settimer(update,0);
 }
