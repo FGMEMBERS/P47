@@ -13,7 +13,7 @@ Wingspan 12.49 m
 
 
 <airplane mass="10000">
-  <approach speed="110" aoa="5">
+  <approach speed="110" aoa="4">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>

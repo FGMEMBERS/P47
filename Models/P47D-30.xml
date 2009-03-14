@@ -495,10 +495,10 @@
         <property>gear/gear[0]/position-norm</property>
         <interpolation>
             <entry>
-                <ind>0.0</ind><dep>81.0</dep>
+                <ind>0.0</ind><dep>80.0</dep>
             </entry>
             <entry>
-                <ind>0.1</ind><dep>81.0</dep>
+                <ind>0.1</ind><dep>80.0</dep>
             </entry>
             <entry>
                 <ind>1.0</ind><dep>0.0</dep>
@@ -544,7 +544,7 @@
         <axis>
             <x>0</x>
             <y>-1.0</y>
-            <z>0</z>
+            <z>0.0</z>
         </axis>
     </animation>
 
