@@ -77,7 +77,7 @@
         </volume>
         <pitch>
             <property>engines/engine/rpm</property>
-            <offset>0.5</offset>
+            <offset>0</offset>
             <factor>0.000666</factor>
         </pitch>
         <position>
@@ -98,13 +98,15 @@
         </condition>
         <volume>
             <property>engines/engine[0]/mp-inhg</property>
-            <factor>0.016</factor>
-            <offset>0.125</offset>
+            <factor>0.026</factor>
+            <offset>0.2</offset>
         </volume>
         <pitch>
             <property>engines/engine[0]/mp-inhg</property>
-            <offset>0.4</offset>
-            <factor>0.01</factor>
+            <offset>0.2</offset>
+            <factor>0.033</factor>
+            <min>0.10</min>
+            <max>1.2</max>
         </pitch>
         <position>
             <x>-3.10</x>

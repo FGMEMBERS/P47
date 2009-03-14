@@ -28,6 +28,16 @@
         <path>Aircraft/P47/Models/Instruments/mp.xml</path>
         <offsets>
             <x-m>-0.735</x-m>
+            <y-m>0.147</y-m>
+            <z-m>0.506</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/P47/Models/Instruments/rpm.xml</path>
+        <offsets>
+            <x-m>-0.735</x-m>
             <y-m>0.243</y-m>
             <z-m>0.506</z-m>
             <pitch-deg>0.0</pitch-deg>
@@ -35,7 +45,7 @@
     </model>
 
     <model>
-        <path>Aircraft/P47/Models/Instruments/tmp.xml</path>
+        <path>Aircraft/P47/Models/Instruments/vsi.xml</path>
         <offsets>
             <x-m>-0.735</x-m>
             <y-m>0.047</y-m>
@@ -75,7 +85,7 @@
     </model>
 
     <model>
-        <path>Aircraft/P47/Models/Instruments/tmp.xml</path>
+        <path>Aircraft/P47/Models/Instruments/flapgear.xml</path>
         <offsets>
             <x-m>-0.735</x-m>
             <y-m>-0.273</y-m>
@@ -98,8 +108,8 @@
         <path>Aircraft/P47/Models/Instruments/starter.xml</path>
         <offsets>
             <x-m>-0.735</x-m>
-            <y-m>0.231</y-m>
-            <z-m>0.654</z-m>
+            <y-m>0.260</y-m>
+            <z-m>0.427</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -628,7 +638,7 @@
         <center>
             <x-m>-1.635</x-m>
             <y-m>-2.248</y-m>
-            <z-m>-1.885</z-m>
+            <z-m>-1.786</z-m>
         </center>
         <axis>
             <x>0.0</x>
@@ -875,12 +885,88 @@
         <center>
             <x-m>-1.635</x-m>
             <y-m>2.248</y-m>
-            <z-m>-1.885</z-m>
+            <z-m>-1.786</z-m>
         </center>
         <axis>
             <x>0.0</x>
             <y>-1</y>
             <z>0</z>
+        </axis>
+    </animation>
+
+<!-- Rear Gear-->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Ctire</object-name>
+        <property>gear/gear[2]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>-70.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind><dep>-70.0</dep>
+            </entry>
+            <entry>
+                <ind>0.4</ind><dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind><dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>4.153</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.448</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>LRdoor</object-name>
+        <property>gear/gear[2]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind><dep>-90.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>3.935</x1-m>
+            <y1-m>-0.209</y1-m>
+            <z1-m>-0.490</z1-m>
+            <x2-m>4.759</x2-m>
+            <y2-m>-0.125</y2-m>
+            <z2-m>-0.357</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>RRdoor</object-name>
+        <property>gear/gear[2]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind><dep>-90.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>4.759</x1-m>
+            <y1-m>0.125</y1-m>
+            <z1-m>-0.357</z1-m>
+            <x2-m>3.935</x2-m>
+            <y2-m>0.209</y2-m>
+            <z2-m>-0.490</z2-m>
         </axis>
     </animation>
 
@@ -895,7 +981,7 @@
         <condition>
             <less-than>
                 <property>engines/engine[0]/rpm</property>
-                <value>700.000</value>
+                <value>500.000</value>
             </less-than>
         </condition>
     </animation>
@@ -907,11 +993,11 @@
             <and>
                 <greater-than>
                     <property>engines/engine[0]/rpm</property>
-                    <value>699.999</value>
+                    <value>499.999</value>
                 </greater-than>
                 <less-than>
                     <property>engines/engine[0]/rpm</property>
-                    <value>1000.000</value>
+                    <value>1600.000</value>
                 </less-than>
             </and>
         </condition>

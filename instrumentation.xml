@@ -73,33 +73,16 @@ This file selects the instrumentation modules that should be available.
         <number>0</number>
     </slip-skid-ball>
 
-    <transponder>
-        <name>transponder</name>
-        <number>0</number>
-        <mode-c-altitude>/instrumentation/encoder/mode-c-alt-ft</mode-c-altitude>
-    </transponder>
-
     <turn-indicator>
         <name>turn-indicator</name>
         <number>0</number>
     </turn-indicator>
 
-    <inst-vertical-speed-indicator>
-        <name>inst-vertical-speed-indicator</name>
-        <number>0</number>
-        <static-pressure>systems/static/pressure-inhg</static-pressure>
-        <serviceable type="bool">true</serviceable>
-    </inst-vertical-speed-indicator>
-
-    <mk-viii>
-        <name>mk-viii</name>
-        <number>0</number>
-    </mk-viii>
-
-    <radar>
-        <name>radar</name>
-        <number>0</number>
-    </radar>
+  <vertical-speed-indicator>
+    <name>vertical-speed-indicator</name>
+    <number>0</number>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </vertical-speed-indicator>
 
     <tacan>
         <name>tacan</name>

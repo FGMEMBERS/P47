@@ -97,7 +97,7 @@ var update = func {
         var scnd = getprop("sim/time/delta-sec");
         if(getprop("controls/engines/engine/energizer")==1){
             if(getprop("systems/electrical/batt-volts")>5){
-                engr=engr+(scnd*0.05);
+                engr=engr+(scnd*0.075);
                 if(engr>1)engr=1;
             }
         }else{
