@@ -66,9 +66,11 @@ controls.applyBrakes = func(v, which = 0) {
         if (which <= 0) { interpolate("/controls/gear/brake-left", v, fullBrakeTime); }
         if (which >= 0) { interpolate("/controls/gear/brake-right", v, fullBrakeTime); }
     }else{
+        if(getprop("controls/armament/ammo")<=0) v=0;
         setprop("controls/armament/guns",v);
     }
 }
+
 wastegate = func(wg) {
 var tmp = getprop("controls/engines/engine/wastegate") or 0;
 var amnt = 0.02 * wg;
@@ -78,6 +80,13 @@ if(tmp< 0.00) tmp=0.00;
 setprop("controls/engines/engine/wastegate",tmp);
 }
 
+load_ammo = func{
+    if(getprop("gear/gear/wow")){
+        if(getprop("controls/gear/brake-parking")){
+            setprop("controls/armament/ammo",2800);
+        }
+    }
+}
 
 setlistener("/sim/signals/fdm-initialized", func {
     Vvolume.setDoubleValue(-0.3);
@@ -99,14 +108,6 @@ setlistener("/sim/current-view/internal", func(vw){
     }
 },1,0);
 
-setlistener("/sim/model/autostart", func(idle){
-    if(idle.getBoolValue()){
-        Startup();
-    }else{
-        Shutdown();
-    }
-},0,0);
-
 
 var update = func {
         var idle=0;
@@ -114,6 +115,15 @@ var update = func {
         var eg=props.globals.getNode("engines/engine/energizer",1);
         var engr=eg.getValue();
         var scnd = getprop("sim/time/delta-sec");
+        if(getprop("controls/armament/guns")){
+            var rounds=getprop("controls/armament/ammo");
+            if(rounds>0){
+                var spent= 80 * scnd;
+                rounds = rounds-spent;
+                if(rounds<0)rounds=0;
+            }
+            setprop("controls/armament/ammo",rounds);
+        }
         if(getprop("controls/engines/engine/energizer")==1){
             if(getprop("systems/electrical/batt-volts")>5){
                 engr=engr+(scnd*0.075);

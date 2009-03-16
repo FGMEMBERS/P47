@@ -51,6 +51,22 @@
 
         <chase-distance-m type="double" archive="y">-20.0</chase-distance-m>
 
+    <menubar>
+        <default>
+            <menu n="10">
+                <label>P-47D</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Load 50 cal. Ammo</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>p47.load_ammo();</script>
+                    </binding>
+            </item>
+            </menu>
+        </default>
+    </menubar>
+
     <help>
         <title>P-47 Checklist</title>
         <line></line> 
@@ -112,6 +128,7 @@
         </lighting>
         <armament>
             <guns type="bool">0</guns>
+            <ammo type="double">0</ammo><!--350 rounds per gun-->
         </armament>
     </controls>
 

@@ -31,22 +31,22 @@
             <phi-max-deg>60</phi-max-deg>
             <speed-mps>
                 <value>0</value>
-                <spread>5</spread>
+                <spread>2</spread>
             </speed-mps>
             <rotation-speed>
-                <x-max-deg-sec>15</x-max-deg-sec>
-                <x-min-deg-sec>-15</x-min-deg-sec>
-                <y-max-deg-sec>15</y-max-deg-sec>
-                <y-min-deg-sec>-15</y-min-deg-sec>
-                <z-max-deg-sec>15</z-max-deg-sec>
-                <z-min-deg-sec>-15</z-min-deg-sec>
+                <x-max-deg-sec>25</x-max-deg-sec>
+                <x-min-deg-sec>-25</x-min-deg-sec>
+                <y-max-deg-sec>25</y-max-deg-sec>
+                <y-min-deg-sec>-25</y-min-deg-sec>
+                <z-max-deg-sec>25</z-max-deg-sec>
+                <z-min-deg-sec>-25</z-min-deg-sec>
             </rotation-speed>
         </shooter>
 
         <counter>
             <particles-per-sec>
                 <value>10</value>
-                <spread>20</spread>
+                <spread>10</spread>
             </particles-per-sec>
         </counter>
 
@@ -65,7 +65,7 @@
                         <value>0.95</value>
                     </blue>
                     <alpha>
-                        <value>0.1</value>
+                        <value>0.2</value>
                     </alpha>
                 </color>
                 <size>
@@ -88,7 +88,7 @@
                     </alpha>
                 </color>
                 <size>
-                    <value>10</value>
+                    <value>5</value>
                 </size>
             </end>
             <life-sec>

@@ -923,10 +923,10 @@
         <property>gear/gear[2]/position-norm</property>
         <interpolation>
             <entry>
-                <ind>0.0</ind><dep>-80.0</dep>
+                <ind>0.0</ind><dep>-90.0</dep>
             </entry>
             <entry>
-                <ind>0.1</ind><dep>-80.0</dep>
+                <ind>0.1</ind><dep>-90.0</dep>
             </entry>
             <entry>
                 <ind>0.4</ind><dep>0.0</dep>
