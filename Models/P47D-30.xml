@@ -11,6 +11,27 @@
         <object-name>Canopy</object-name>
         <object-name>glass</object-name>
     </animation>
+<!-- effects-->
+
+    <model>
+        <path>Aircraft/P47/Models/Effects/gunsmoke.xml</path>
+        <name>gunsmoke1</name>
+        <offsets>
+            <x-m>-2.4</x-m>
+            <y-m>-2.9 </y-m>
+            <z-m>-0.338</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/P47/Models/Effects/gunsmoke.xml</path>
+        <name>gunsmoke2</name>
+        <offsets>
+            <x-m>-2.4</x-m>
+            <y-m>2.9 </y-m>
+            <z-m>-0.338</z-m>
+        </offsets>
+    </model>
 
 <!-- Instruments-->
 
@@ -55,11 +76,11 @@
     </model>
 
     <model>
-        <path>Aircraft/P47/Models/Instruments/tmp.xml</path>
+        <path>Aircraft/P47/Models/Instruments/fgals.xml</path>
         <offsets>
             <x-m>-0.735</x-m>
-            <y-m>0.0</y-m>
-            <z-m>0.448</z-m>
+            <y-m>0.147</y-m>
+            <z-m>0.410</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -915,14 +936,31 @@
             </entry>
         </interpolation>
         <center>
-            <x-m>4.083</x-m>
+            <x-m>4.154</x-m>
             <y-m>0</y-m>
-            <z-m>-0.379</z-m>
+            <z-m>-0.365</z-m>
         </center>
         <axis>
             <x>0</x>
             <y>1</y>
             <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Ctire</object-name>
+        <property>gear/gear[2]/caster-angle-deg</property>
+        <factor>1</factor>
+        <center>
+            <x-m>4.154</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.365</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
         </axis>
     </animation>
 

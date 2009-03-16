@@ -60,6 +60,25 @@ controls.startEngine = func(v=1 ) {
     setprop("controls/engines/engine/starter",v);
 }
 
+controls.applyBrakes = func(v, which = 0) {
+    var fullBrakeTime = 0.5;
+    if(getprop("gear/gear/wow")){
+        if (which <= 0) { interpolate("/controls/gear/brake-left", v, fullBrakeTime); }
+        if (which >= 0) { interpolate("/controls/gear/brake-right", v, fullBrakeTime); }
+    }else{
+        setprop("controls/armament/guns",v);
+    }
+}
+wastegate = func(wg) {
+var tmp = getprop("controls/engines/engine/wastegate") or 0;
+var amnt = 0.02 * wg;
+tmp=tmp + amnt;
+if(tmp>1.00) tmp=1.00;
+if(tmp< 0.00) tmp=0.00;
+setprop("controls/engines/engine/wastegate",tmp);
+}
+
+
 setlistener("/sim/signals/fdm-initialized", func {
     Vvolume.setDoubleValue(-0.3);
     FDM=getprop("sim/flight-model");

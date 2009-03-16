@@ -59,32 +59,31 @@
         <line> 1:Set fuel tank switch to ' Main ' *</line>
         <line> 2:Set trim tabs to takeoff position *</line>
         <line> 3:Flaps up</line>
-        <line> 4:Gear down/locked </line>
+        <line> 4:Gear down/locked ( g / G)</line>
         <line> 5:Oil / Intercooler shutters open *</line>
-        <line> 6:Turbo close *</line>
-        <line> 7:Throttle open half inch ( PgUp/PgDn )</line>
-        <line> 8:Prop lever full forward ( N/n )</line>
-        <line> 9:Mixture at idle cutoff( M/m )</line>
+        <line> 6:Turbo close ( w / W)</line>
+        <line> 7:Throttle open half inch ( PgUp / PgDn )</line>
+        <line> 8:Prop lever full forward ( N / n )</line>
+        <line> 9:Mixture at idle cutoff( M / m )</line>
         <line>10:Generator switch on *</line>
         <line>11:Prop control switch to automatic *</line>
-        <line>12:Mags off</line>
+        <line>12:Mags off ( { / } )</line>
         <line>13:Battery off</line>
         <line>14:Cage flight instruments *</line>
         <line>15:Cowl flaps open *</line>
         <line>16:Radio off *</line>
         <line>17:Tail wheel unlock ( l )</line>
-        <line>----------------------------</line> 
+        <line>#############</line>
         <line>Startup</line>
-        <line>----------------------------</line> 
+        <line>#############</line>
         <line> 1:Mags on 'BOTH'</line>
         <line> 2:Battery on</line>
         <line> 3:Pump primer twice *</line>
         <line> 4:Hold energizer 15 seconds</line>
-        <line> 5:Engage starter</line>
+        <line> 5:Engage starter ( s )</line>
         <line>----------------------------</line> 
         <line>Notes : lock tailwheel when lined up on runway</line>
     </help>
-
     </sim>
 
     <controls>
@@ -111,6 +110,9 @@
         <lighting>
             <instrument-lights type="bool">1</instrument-lights>
         </lighting>
+        <armament>
+            <guns type="bool">0</guns>
+        </armament>
     </controls>
 
     <engines>
@@ -125,5 +127,28 @@
         <file>Aircraft/P47/Nasal/Electrical.nas</file>
     </p47>
 </nasal>
+
+    <input>
+        <keyboard>
+            <key n="119">
+                <name>w</name>
+                <desc>Increase wastegate</desc>
+                <repeatable>true</repeatable>
+                <binding>
+                    <command>nasal</command>
+                    <script>p47.wastegate(1)</script>
+                </binding>
+            </key>
+            <key n="87">
+                <name>W</name>
+                <desc>Decrease wastegate</desc>
+                <repeatable>true</repeatable>
+                <binding>
+                    <command>nasal</command>
+                    <script>p47.wastegate(-1)</script>
+                </binding>
+            </key>
+        </keyboard>
+    </input>
 
 </PropertyList>

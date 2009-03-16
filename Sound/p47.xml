@@ -232,6 +232,23 @@
         <max-dist>10.0</max-dist>
     </flap>
 
+    <guns>
+        <name>guns</name>
+        <mode>looped</mode>
+        <path>Aircraft/P47/Sound/50cal.wav</path>
+        <property>controls/armament/guns</property>
+        <volume>
+            <property>controls/armament/guns</property>
+        </volume>
+        <position>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </position>
+        <reference-dist>20.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </guns>
+
     <wind>
         <name>wind</name>
         <mode>looped</mode>

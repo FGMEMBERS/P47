@@ -7,7 +7,7 @@
         <type>rotate</type>
         <object-name>Starter.switch</object-name>
         <property>controls/engines/engine/starter</property>
-        <factor>30</factor>
+        <factor>-30</factor>
         <center>
             <x-m>0.002</x-m>
             <y-m>0</y-m>
@@ -15,8 +15,8 @@
         </center>
         <axis>
             <x>0</x>
-            <y>0.0</y>
-            <z>1.0</z>
+            <y>1.0</y>
+            <z>0</z>
         </axis>
     </animation>
 
@@ -24,11 +24,11 @@
         <type>rotate</type>
         <object-name>Starter.switch</object-name>
         <property>controls/engines/engine/energizer</property>
-            <factor>-30</factor>
+            <factor>30</factor>
         <axis>
             <x>0</x>
-            <y>0.0</y>
-            <z>1.0</z>
+            <y>1.0</y>
+            <z>0.0</z>
         </axis>
     </animation>
 
