@@ -1,24 +1,24 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "Paint" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
 MATERIAL "Glass" rgb 0.2 0.3 0.5 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 64 trans 0.6
-MATERIAL "inst-metal" rgb 0.820305 0.804905 0.804905 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Paint.002" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.001" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.003" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.004" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.005" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.006" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.007" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.008" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.009" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.010" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.011" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "Paint.012" rgb 0.815734 0.815734 0.815734 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
-MATERIAL "interior" rgb 0.5 0.5 0.5 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.246091 0.305667 0.218891 shi 6 trans 0
-MATERIAL "nospec" rgb 0.3 0.3 0.3 amb 0 0 0 emis 0 0 0 spec 0.1 0.1 0.1 shi 3 trans 0
+MATERIAL "inst-metal" rgb 0.820305 0.804905 0.804905 amb 0.820305 0.804905 0.804905 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Paint.002" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.001" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.003" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.004" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.005" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.006" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.007" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.008" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.009" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.010" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.011" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "Paint.012" rgb 0.815734 0.815734 0.815734 amb 1 1 1 emis 0 0 0 spec 0.835123 0.923131 1 shi 32 trans 0
+MATERIAL "interior" rgb 0.5 0.5 0.5 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.246091 0.305667 0.218891 shi 6 trans 0
+MATERIAL "nospec" rgb 0.3 0.3 0.3 amb 0.3 0.3 0.3 emis 0 0 0 spec 0.1 0.1 0.1 shi 3 trans 0
 MATERIAL "Black" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 0 trans 0
-MATERIAL "gunmetal" rgb 0.244242 0.244242 0.244242 amb 0 0 0 emis 0 0 0 spec 0.789293 0.789293 0.789293 shi 25 trans 0
+MATERIAL "gunmetal" rgb 0.244242 0.244242 0.244242 amb 0.244242 0.244242 0.244242 emis 0 0 0 spec 0.789293 0.789293 0.789293 shi 25 trans 0
 MATERIAL "prop" rgb 0.981212 0.981212 0.981212 amb 0 0 0 emis 0 0 0 spec 0.451515 0.451515 0.451515 shi 20 trans 0.8
 OBJECT world
 kids 74
