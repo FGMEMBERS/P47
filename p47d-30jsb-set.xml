@@ -5,7 +5,7 @@
     <sim>
 
         <description>P47D</description>
-        <author>Syd Adams, Swamp (JSBsim FDM)</author>
+        <author>Syd Adams, Cain, Swamp (JSBsim FDM)</author>
         <flight-model>jsb</flight-model>
         <aero>P47dJSBsim</aero>
         <fuel-fraction>0.8</fuel-fraction>
@@ -15,6 +15,10 @@
 
         <model>
             <path>Aircraft/P47/Models/P47D-30.xml</path>
+            <livery>
+                <file type="string">default</file>
+            </livery>
+    
         </model>
         <sound>
             <path>Aircraft/P47/Sound/p47.xml</path>
@@ -63,9 +67,19 @@
                         <script>p47.load_ammo();</script>
                     </binding>
             </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
             </menu>
         </default>
     </menubar>
+
+  
+
 
     <help>
         <title>P-47 Checklist</title>
@@ -142,6 +156,7 @@
     <p47>
         <file>Aircraft/P47/Nasal/P47.nas</file>
         <file>Aircraft/P47/Nasal/Electrical.nas</file>
+      <file>Aircraft/P47/Nasal/liveries.nas</file>
     </p47>
 </nasal>
 
